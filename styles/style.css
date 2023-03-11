@@ -1,3 +1,7 @@
+@import url(https://fonts.bunny.net/css?family=merriweather:300,400,700,900|roboto:100,300,400,500);
+
+/*font-family: 'Merriweather', serif;*/
+/*font-family: 'Roboto', sans-serif;*/
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -8,13 +12,33 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    Margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+   --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --light-purple: #F2F0FF;
+    --light-gray: #F3F6F9;
+    --gray #7A7A7A;
+}
 /* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: 'Merriweather', serif;
+}
+
+h1 h2 h3 h4 {
+    font-family: 'Roboto', sans-serif;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -25,6 +49,12 @@
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+
+header {
+    background-color: ;
+}
+
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
