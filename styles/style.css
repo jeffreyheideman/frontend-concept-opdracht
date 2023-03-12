@@ -87,7 +87,7 @@ h1, h2, h3, h4 {
 
 /* --------------- 4.1 Header ------------------------- */
 
-header {
+header, .contact-form {
     /*display: flex;*/
     /*justify-content: center;*/
     width: 100%;
@@ -272,6 +272,10 @@ header {
     margin: 0.7em 0 1.8em 0;
     font-size: 1.3em;
 }
+
+/* --------------- 4.5 Contact Form ------------------- */
+
+
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
