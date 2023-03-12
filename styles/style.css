@@ -23,17 +23,34 @@
 }
 
 :root {
-   --purple: #5722CD;
+    --purple: #5722CD;
     --blue: #4845E4;
     --pink: #ED4385;
     --black: #0C0C0C;
     --light-purple: #F2F0FF;
     --light-gray: #F3F6F9;
-    --gray #7A7A7A;
+    --gray: #7A7A7A;
+}
+
+button {
+    background-color: var(--pink);
+    color: white;
+    border: transparent;
+    padding: 1.3em 1em;
+    width: 230px;
+    align-self: center;
+    text-transform: uppercase;
+    border-radius: 50px 50px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+
+
 }
 /* ------------------------------- 2. Typography ----------------------------------- */
 body {
     font-family: 'Merriweather', serif;
+    text-align: center;
 }
 
 h1 h2 h3 h4 {
@@ -51,11 +68,86 @@ h1 h2 h3 h4 {
 /* --------------- 4.1 Header ------------------------- */
 
 header {
-    background-color: ;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    width: 100%;
+    /*border: 3px solid pink;*/
+    height: 650px;
+    background: rgb(72,69,228);
+    background: radial-gradient(circle, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    color: white;
 }
 
+.nav-outer-container {
+    display: flex;
+    width: 100%;
+    /*border: 2px solid green;*/
+    justify-content: flex-end;
+    padding-top: 1em;
+    }
 
+.nav-inner-container {
+    display: flex;
+    /*border: 2px solid red;*/
+    justify-content: flex-end;
+    list-style: none;
+    gap:2em;
+    margin: 1em 2em;
+}
+
+.header-content-outer-container {
+    display: flex;
+    /*border: 2px solid red;*/
+    margin-top: 7em;
+    justify-content: center;
+}
+
+.header-content-inner-container {
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex-basis: 1200px;
+    flex-shrink: 1;
+}
+
+.header-title {
+    width: 850px;
+    align-self: center;
+    font-size: 46px;
+    flex-shrink: 1;
+}
+
+.header-paragraph {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.header-squiggle-line-outer-container{
+    position: relative;
+}
+
+.squiggle-line {
+    position: absolute;
+    top: 100px;
+    left: -35px;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin: 5em 0;
+}
+.introduction > p:nth-child(-n+3) {
+    color: var(--purple);
+    font-size: 1.8em;
+    font-weight: 600;
+    width: 850px;
+
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
