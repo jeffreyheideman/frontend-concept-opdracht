@@ -1,6 +1,5 @@
 @import url(https://fonts.bunny.net/css?family=merriweather:300,400,700,900|roboto:100,300,400,500);
-
-/*font-family: 'Merriweather', serif;*/
+/* font-family: 'Merriweather', serif;*/
 /*font-family: 'Roboto', sans-serif;*/
 /*////////////////////////
     Table of Contents
@@ -12,8 +11,10 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-    5. Media Queries
-////////////////////////*/
+        4.3 Projects
+ */
+    /*5. Media Queries*/
+ /*////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 * {
@@ -49,12 +50,22 @@ button {
 }
 /* ------------------------------- 2. Typography ----------------------------------- */
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
-h1 h2 h3 h4 {
-    font-family: 'Roboto', sans-serif;
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', sans-serif;
+}
+
+
+.link-tag {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.link-tag:hover {
+    color: var(--pink);
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
@@ -141,13 +152,78 @@ header {
     gap: 2em;
     margin: 5em 0;
 }
-.introduction > p:nth-child(-n+3) {
+.introduction > h3:nth-child(-n+3) {
     color: var(--purple);
     font-size: 1.8em;
     font-weight: 600;
     width: 850px;
-
 }
 
+.introduction > h3:nth-child(4) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* --------------- 4.3 Projects ------------------- */
+.projects {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /*border: 3px solid pink;*/
+    width: 100%;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+    /*border: 3px solid black;*/
+    padding: 5em 2em;
+    max-width: 1400px;
+    justify-content: center;
+    gap: 8em;
+}
+
+.project > article {
+    display: flex;
+    flex-direction: column;
+    /*border: 3px solid green;*/
+    gap: 2em;
+    justify-content: center;
+    flex: 1;
+}
+
+.paragraph-squiggle {
+    width: 50px
+}
+
+.project-paragraph {
+    width: 300px;
+    /*border: 2px solid pink;*/
+    font-weight: 500;
+}
+
+.project-image-wrapper {
+    max-width: 600px;
+}
+
+.project-image {
+    width: 100%;
+    box-shadow: -1px 22px 33px -10px rgba(56,56,56,0.65);
+}
+
+.project-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.project-2 {
+    flex-direction: row-reverse;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
