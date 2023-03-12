@@ -12,6 +12,7 @@
         4.1 Header
         4.2 Introduction
         4.3 Projects
+        4.4 Services
  */
     /*5. Media Queries*/
  /*////////////////////////*/
@@ -58,6 +59,13 @@ h1, h2, h3, h4 {
     font-family: 'Merriweather', sans-serif;
 }
 
+.services h4 {
+    color: var(--purple);
+}
+
+.services p {
+    color: var(--gray);
+}
 
 .link-tag {
     color: var(--purple);
@@ -67,6 +75,7 @@ h1, h2, h3, h4 {
 .link-tag:hover {
     color: var(--pink);
 }
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -131,7 +140,7 @@ header {
 
 .header-paragraph {
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .header-squiggle-line-outer-container{
@@ -173,15 +182,17 @@ header {
     /*border: 3px solid pink;*/
     width: 100%;
     align-items: center;
+    padding: 3em 0;
 }
 
 .project {
     display: flex;
     /*border: 3px solid black;*/
-    padding: 5em 2em;
-    max-width: 1400px;
+    padding: 2em 2em;
+    max-width: 1200px;
     justify-content: center;
     gap: 8em;
+    margin: 0 2em;
 }
 
 .project > article {
@@ -204,7 +215,7 @@ header {
 }
 
 .project-image-wrapper {
-    max-width: 600px;
+    flex-basis: 600px;
 }
 
 .project-image {
@@ -225,5 +236,39 @@ header {
 .project-2 {
     flex-direction: row-reverse;
 }
+
+/* --------------- 4.4 Services ------------------- */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+    text-align: left;
+    margin: 5em 2em;
+}
+
+.services-inner-container {
+    display: grid;grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2em;
+    max-width: 1200px;
+}
+
+.service-article {
+    border: 2px solid var(--purple);
+    padding: 2.5em;
+    box-shadow: 2px 29px 15px -20px rgba(222,222,222,1);
+}
+
+
+.services-icon {
+    width: 60px;
+}
+
+.service-article h4 {
+    margin: 0.7em 0 1.8em 0;
+    font-size: 1.3em;
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
