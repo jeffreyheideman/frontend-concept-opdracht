@@ -248,8 +248,8 @@ header {
 }
 
 .services-inner-container {
-    display: grid;grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-template-columns: auto auto auto;
     grid-gap: 2em;
     max-width: 1200px;
 }
@@ -258,6 +258,9 @@ header {
     border: 2px solid var(--purple);
     padding: 2.5em;
     box-shadow: 2px 29px 15px -20px rgba(222,222,222,1);
+    min-width: auto;
+    min-height: 300px;
+    overflow: hidden;
 }
 
 
