@@ -46,7 +46,7 @@
     color: white;
     border: transparent;
     padding: 1.3rem 1.5rem;
-    width: 230px;
+    min-width: 230px;
     align-self: center;
     text-transform: uppercase;
     border-radius: 50px 50px;
@@ -146,10 +146,12 @@ header, .contact-form {
     gap: 2rem;
     flex-basis: 1200px;
     flex-shrink: 1;
+    margin: 0 1rem;
 }
 
 .header-title {
-    width: 850px;
+    width: auto;
+    max-width: 850px;
     align-self: center;
     font-size: 46px;
     flex-shrink: 1;
@@ -171,31 +173,40 @@ header, .contact-form {
     /*border: 3px solid black;*/
 }
 
-/*
+
+
+/* --------------- 3.2 Introduction ------------------- */
+/*.triangle-outer-container {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    position: relative;
+
+}
 .triangle {
     width: 0;
     height: 0;
     border-top: var(--theight) solid transparent;
     border-bottom: var(--theight) solid transparent;
-    border-left: var(--twidth) solid white;
-    position: absolute;
-    top: 623px;
-}
-*/
+    border-left: var(--twidth) solid green;
 
-/* --------------- 3.2 Introduction ------------------- */
+
+}*/
+
 .introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     margin: 5rem 0;
+    /*border: 3px solid hotpink;*/
 }
 .introduction > h3:nth-child(-n+3) {
     color: var(--purple);
     font-size: 1.8rem;
     font-weight: 600;
-    width: 850px;
+    max-width: 850px;
+    margin: 0 1rem;
 }
 
 /* --------------- 3.3 Projects ------------------- */
@@ -348,7 +359,6 @@ header, .contact-form {
     /*border: 3px solid white;*/
     width: 900px;
     text-align: left;
-    margin-bottom: 1rem;
 }
 
 .contact-form-inner-container input {
@@ -384,7 +394,6 @@ footer {
     height: 50px;
     width: 100%;
     color: white;
-    position: relative;
 }
 
 .footer-text {
