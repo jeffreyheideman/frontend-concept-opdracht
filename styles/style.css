@@ -198,15 +198,32 @@ header, .contact-form {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin: 5rem 0;
+    margin: 10rem 0 1rem 0;
+    padding-bottom: 5rem;
+    height: auto;
     /*border: 3px solid hotpink;*/
 }
+
+/*.introduction::before {
+    content: "hello";
+    font-size: 28rem;
+    color: var(--light-purple);
+    z-index: -1;
+    font-weight: 500;
+    max-width: 850px;
+    width: auto;
+}*/
+
 .introduction > h3:nth-child(-n+3) {
     color: var(--purple);
     font-size: 1.8rem;
     font-weight: 600;
     max-width: 850px;
     margin: 0 1rem;
+}
+
+.contact-paragraph {
+    margin: 5rem 0;
 }
 
 /* --------------- 3.3 Projects ------------------- */
