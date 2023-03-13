@@ -568,6 +568,32 @@ footer {
     .form-btn {
         width: 180px;
     }
+    /* --------------- 4.7 Bonusopdracht mobile ------------------- */
+    .intro-paragraph::before {
+        font-size: 15rem;
+        left: 80px;
+        top: -115px;
+        letter-spacing: -1.5rem;
+    }
+
+    .project-1::before {
+        font-size: 10rem;
+        top: -90px;
+        left: 130px;
+        font-weight: 700;
+        letter-spacing: -1rem;
+
+    }
+
+    .services-inner-container::before {
+        font-size: 10rem;
+        letter-spacing: -0.7rem;
+        top: -140px;
+        left: -10px;
+
+    }
+
+
 
 }
 
