@@ -250,6 +250,7 @@ header, .contact-form {
 }
 
 .project-link {
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -257,6 +258,23 @@ header, .contact-form {
     letter-spacing: 0.2rem;
     color: var(--purple);
     cursor: pointer;
+}
+
+
+.project-link::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 6%;
+    height: 3px;
+    background-color: var(--purple);
+    left: 130px;
+    top: 6px;
+    transition: width .35s ease-in-out;
+}
+
+.project-link:hover::after {
+    width: 15%;
 }
 
 .project:nth-child(even) {
