@@ -172,25 +172,28 @@ header, .contact-form {
     left: -35px;
     /*border: 3px solid black;*/
 }
+.triangle {
+    position: relative;
+    background-color: transparent;
+    height: 1px;
+    width: 100%;
+}
+
+.triangle::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 500px;
+    clip-path: polygon(0 90%, 0 100%, 100% 100%);
+    background-color: white;
+    top: -498px;
 
 
+
+}
 
 /* --------------- 3.2 Introduction ------------------- */
-/*
-main {
-    position: relative;
-}
-
-.triangle {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: var(--theight) solid transparent;
-    border-bottom: var(--theight) solid transparent;
-    border-left: var(--twidth) solid white;
-    top: -195px;
-}
-*/
 
 .introduction {
     position: relative;
@@ -242,7 +245,12 @@ main {
     width: 100%;
     align-items: center;
     padding: 3rem 0;
+
 }
+
+.triangle-2::before {
+    background-color: var(--light-gray);
+    }
 
 .project {
     display: flex;
@@ -315,6 +323,7 @@ main {
     flex-direction: row-reverse;
 }
 
+
 /* --------------- 3.4 Services ------------------- */
 .services {
     display: flex;
@@ -322,7 +331,7 @@ main {
     align-items: center;
     flex-basis: 100%;
     text-align: left;
-    margin: 5rem 2rem;
+    margin: 10rem 2rem;
 }
 
 .services-inner-container {
@@ -349,6 +358,15 @@ main {
 .service-article h4 {
     margin: 0.7rem 0 1.8rem 0;
     font-size: 1.3rem;
+}
+
+.triangle-4 {
+    background-color: red;
+}
+
+.triangle-4::before {
+    background: rgb(72,69,228);
+    background: radial-gradient(circle, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
 }
 
 /* --------------- 3.5 Contact Form ------------------- */
@@ -454,10 +472,6 @@ footer {
         padding: 1.8rem;
     }
 
-    .triangle {
-        top: -175px;
-    }
-
     /* --------------- 4.3 Introduction Mobile ------------------- */
     .introduction > h3:nth-child(-n+3) {
         width: auto;
@@ -523,10 +537,3 @@ footer {
 
 }
 
-@media screen and (min-width: 0px) and (max-width: 580px) {
-    
-    .triangle {
-        top: -170px;
-    }
-
-}
