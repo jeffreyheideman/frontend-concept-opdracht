@@ -176,22 +176,21 @@ header, .contact-form {
 
 
 /* --------------- 3.2 Introduction ------------------- */
-/*.triangle-outer-container {
-    display: flex;
-    flex-direction: column;
-    border: 3px solid black;
+main {
     position: relative;
-
 }
+
 .triangle {
+    position: absolute;
     width: 0;
     height: 0;
     border-top: var(--theight) solid transparent;
     border-bottom: var(--theight) solid transparent;
-    border-left: var(--twidth) solid green;
+    border-left: var(--twidth) solid white;
+    top: -195px;
 
 
-}*/
+}
 
 .introduction {
     display: flex;
@@ -424,7 +423,7 @@ footer {
 /*    color: green;*/
 /*}*/
 /* ------------------------------- 4. Media Queries -------------------------------- */
-@media screen and (min-width: 0px) and (max-width: 776px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
 
     /* --------------- 4.1 Nav-mobile ------------------- */
 
@@ -445,6 +444,10 @@ footer {
     .button  {
         width: auto;
         padding: 1.8rem;
+    }
+
+    .triangle {
+        top: -175px;
     }
 
     /* --------------- 4.3 Introduction Mobile ------------------- */
@@ -508,6 +511,14 @@ footer {
 
     .form-btn {
         width: 180px;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 580px) {
+    
+    .triangle {
+        top: -170px;
     }
 
 }
