@@ -37,6 +37,8 @@
     --light-purple: #F2F0FF;
     --light-gray: #F3F6F9;
     --gray: #7A7A7A;
+    --twidth: calc(100vw / 1 );
+    --theight: calc(var(--twidth) / 50);
 }
 
 .button {
@@ -96,15 +98,20 @@ h1, h2, h3, h4 {
 
 /* --------------- 3.1 Header ------------------------- */
 
+header  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header, .contact-form {
-    /*display: flex;*/
-    /*justify-content: center;*/
     width: 100%;
-    /*border: 3px solid pink;*/
-    height: 650px;
+    height: auto;
     background: rgb(72,69,228);
     background: radial-gradient(circle, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
     color: white;
+    position: relative;
+    padding-bottom: 13.3em;
 }
 
 .nav-outer-container {
@@ -161,6 +168,17 @@ header, .contact-form {
     position: absolute;
     top: 100px;
     left: -35px;
+    /*border: 3px solid black;*/
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: var(--theight) solid transparent;
+    border-bottom: var(--theight) solid transparent;
+    border-left: var(--twidth) solid white;
+    position: absolute;
+    top: 623px;
 }
 
 /* --------------- 3.2 Introduction ------------------- */
@@ -346,6 +364,7 @@ footer {
     height: 50px;
     width: 100%;
     color: white;
+    position: relative;
 }
 
 .footer-text {
@@ -353,6 +372,11 @@ footer {
     font-size: 13px;
 }
 
+/*.triangle-footer {*/
+/*    position: absolute;*/
+/*    top: -875px;*/
+/*    color: green;*/
+/*}*/
 /* ------------------------------- 4. Media Queries -------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 776px) {
 
@@ -372,17 +396,17 @@ footer {
         width: auto;
     }
 
-    header {
-        height: 700px;
+    .button  {
+        width: auto;
+        padding: 1.8rem;
     }
 
-    .button  {
-        width: 280px;
-        padding: 1.8rem;
+    .squiggle-line {
+        top:
     }
     /* --------------- 4.3 Introduction Mobile ------------------- */
     .introduction > h3:nth-child(-n+3) {
-        width: 600px;
+        width: auto;
         margin-inline: 1rem;
     }
     /* --------------- 4.4 Projects Mobile ------------------- */
