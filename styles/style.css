@@ -176,6 +176,7 @@ header, .contact-form {
 
 
 /* --------------- 3.2 Introduction ------------------- */
+/*
 main {
     position: relative;
 }
@@ -188,11 +189,11 @@ main {
     border-bottom: var(--theight) solid transparent;
     border-left: var(--twidth) solid white;
     top: -195px;
-
-
 }
+*/
 
 .introduction {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,7 +204,10 @@ main {
     /*border: 3px solid hotpink;*/
 }
 
-/*.introduction::before {
+/*
+.introduction::before {
+    position: absolute;
+    display: block;
     content: "hello";
     font-size: 28rem;
     color: var(--light-purple);
@@ -211,7 +215,10 @@ main {
     font-weight: 500;
     max-width: 850px;
     width: auto;
-}*/
+    top: -150px;
+    left: 400px;
+}
+*/
 
 .introduction > h3:nth-child(-n+3) {
     color: var(--purple);
