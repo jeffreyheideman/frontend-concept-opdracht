@@ -65,7 +65,12 @@ h1, h2, h3, h4 {
     font-family: 'Merriweather', sans-serif;
 }
 
-.introduction > h3:nth-child(4) {
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.introduction > p {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
@@ -195,7 +200,7 @@ header, .contact-form {
     margin: 0 2em;
 }
 
-.project > article {
+.project-article {
     display: flex;
     flex-direction: column;
     /*border: 3px solid green;*/
@@ -234,7 +239,7 @@ header, .contact-form {
     cursor: pointer;
 }
 
-.project-2 {
+.project:nth-child(even) {
     flex-direction: row-reverse;
 }
 
@@ -319,7 +324,7 @@ header, .contact-form {
 }
 
 textarea::placeholder {
-    padding-top: 1rem;
+    padding-top: 1em;
 }
 
 textarea {
@@ -384,7 +389,7 @@ footer {
 
     .project {
         flex-direction: column-reverse;
-        gap: 1rem;
+        gap: 2rem;
         margin-inline: 0.5em;
     }
 
@@ -394,6 +399,10 @@ footer {
 
     .project-title {
         font-size: 30px;
+    }
+
+    .project:nth-child(even) {
+        flex-direction: column-reverse;
     }
     /* --------------- 4.5 Services Mobile ------------------- */
 
