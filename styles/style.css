@@ -1,31 +1,601 @@
+@import url(https://fonts.bunny.net/css?family=merriweather:300,400,700,900|roboto:100,300,400,500);
+/* font-family: 'Merriweather', serif;*/
+/*font-family: 'Roboto', sans-serif;*/
 /*////////////////////////
     Table of Contents
     1. Global Styles
     2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        etc.
-    5. Media Queries
-////////////////////////*/
+    3. Areas
+        3.1 Header
+        3.2 Introduction
+        3.3 Projects
+        3.4 Services
+        3.5 Contact Form
+        3.6 Footer
+ */
+    /*4. Media Queries
+       4.1 Header Mobile
+       4.2 Introduction Mobile
+       4.3 Projects Mobile
+       4.4 Services Mobile
+       4.5 Contact Form Mobile
+*/
+ /*////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    Margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --light-purple: #F2F0FF;
+    --light-gray: #F3F6F9;
+    --gray: #7A7A7A;
+    --twidth: calc(100vw / 1 );
+    --theight: calc(var(--twidth) / 50);
+}
+
+.button {
+    background-color: var(--pink);
+    color: white;
+    border: transparent;
+    padding: 1.3rem 1.5rem;
+    min-width: 230px;
+    align-self: center;
+    text-transform: uppercase;
+    border-radius: 50px 50px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    letter-spacing: 0.15rem;
+}
+
+/*De schuine lijnen die sections afscheiden*/
+.triangle {
+    position: relative;
+    background-color: transparent;
+    height: 1px;
+    width: 100%;
+}
+
+.triangle::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 500px;
+    clip-path: polygon(0 90%, 0 100%, 100% 100%);
+    background-color: white;
+    top: -498px;
+}
+
+.triangle-2::before {
+    background-color: var(--light-gray);
+}
+
+
+.header-squiggle-line-outer-container{
+    position: relative;
+}
+
+.squiggle-line {
+    position: absolute;
+    top: 100px;
+    left: -35px;
+    /*border: 3px solid black;*/
+}
+
+.triangle-4 {
+    background-color: red;
+}
+
+.triangle-4::before {
+    background: rgb(72,69,228);
+    background: radial-gradient(circle, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+}
+
+
+/*De grote woorden achter de sections*/
+
+.intro-paragraph::before, .project-1::before, .services-inner-container::before {
+    position: absolute;
+    display: block;
+    content: "hello";
+    font-size: 30rem;
+    color: var(--light-purple);
+    z-index: -1;
+    font-weight: 500;
+    max-width: 1000px;
+    width: auto;
+    top: -140px;
+    left: -70px;
+}
+
+.project-1::before {
+    content: "work";
+    font-size: 28rem;
+    color: white;
+    top: -220px;
+    left: 50px;
+    letter-spacing: -1rem;
+}
+
+.services-inner-container::before {
+    content: "services";
+    font-size: 18rem;
+    top: -240px;
+    left: 50px;
+}
+
+
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', sans-serif;
+}
 
-/* --------------- 3.1 Reusables ----------------------- */
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
 
-/* --------------- 3.2 Other --------------------------- */
+.introduction > p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
 
-/* ------------------------------- 4. Areas ---------------------------------------- */
+.services h4 {
+    color: var(--purple);
+}
 
-/* --------------- 4.1 Header ------------------------- */
+.services p {
+    color: var(--gray);
+}
 
-/* --------------- 4.2 Introduction ------------------- */
+.link-tag {
+    color: var(--purple);
+    text-decoration: none;
+}
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+.link-tag:hover {
+    color: var(--pink);
+}
+
+/* ------------------------------- 3. Areas ---------------------------------------- */
+
+/* --------------- 3.1 Header ------------------------- */
+
+header  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, .contact-form {
+    width: 100%;
+    height: auto;
+    background: rgb(72,69,228);
+    background: radial-gradient(circle, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    color: white;
+    position: relative;
+    padding-bottom: 13.3em;
+}
+
+.nav-outer-container {
+    display: flex;
+    width: 100%;
+    /*border: 2px solid green;*/
+    justify-content: flex-end;
+    padding-top: 1rem;
+    }
+
+.nav-inner-container {
+    display: flex;
+    /*border: 2px solid red;*/
+    justify-content: flex-end;
+    list-style: none;
+    gap:2rem;
+    margin: 1rem 2rem;
+}
+
+.header-content-outer-container {
+    display: flex;
+    /*border: 2px solid red;*/
+    margin-top: 7rem;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+.header-content-inner-container {
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-basis: 1200px;
+    flex-shrink: 1;
+    margin: 0 1rem;
+}
+
+.header-title {
+    width: auto;
+    max-width: 850px;
+    align-self: center;
+    font-size: 46px;
+    flex-shrink: 1;
+}
+
+.header-paragraph {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* --------------- 3.2 Introduction ------------------- */
+
+.introduction {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 10rem 0 1rem 0;
+    padding-bottom: 5rem;
+    height: auto;
+    /*border: 3px solid hotpink;*/
+}
+
+.intro-paragraph {
+    position: relative;
+    color: var(--purple);
+    font-size: 1.7rem;
+    font-weight: 600;
+    max-width: 900px;
+    margin: 0 1rem;
+}
+
+.intro-paragraph h3 {
+    margin-block: 1.5rem;
+}
+
+
+
+.contact-paragraph {
+    margin: 5rem 0;
+}
+
+/* --------------- 3.3 Projects ------------------- */
+
+.projects {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /*border: 3px solid pink;*/
+    width: 100%;
+    align-items: center;
+    padding: 10rem 0 7rem 0;
+    z-index: -10;
+
+}
+
+
+
+.project {
+    display: flex;
+    /*border: 3px solid black;*/
+    padding: 2rem 2rem;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 8rem;
+    margin: 0 2em;
+}
+
+.project-article {
+    display: flex;
+    flex-direction: column;
+    /*border: 3px solid green;*/
+    gap: 2rem;
+    justify-content: center;
+    flex: 1;
+}
+
+.paragraph-squiggle {
+    width: 50px
+}
+
+.project-paragraph {
+    width: 300px;
+    /*border: 2px solid pink;*/
+    font-weight: 500;
+}
+
+.project-image-wrapper {
+    flex-basis: 600px;
+    /*border: 3px solid red;*/
+}
+
+.project-image {
+    width: 100%;
+    box-shadow: -1px 22px 33px -10px rgba(56,56,56,0.65);
+}
+
+.project-link {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+
+.project-link::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 6%;
+    height: 3px;
+    background-color: var(--purple);
+    left: 130px;
+    top: 6px;
+    transition: width .35s ease-in-out;
+}
+
+.project-link:hover::after {
+    width: 15%;
+}
+
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-1 {
+    position: relative;
+    z-index: 1;
+}
+
+/* --------------- 3.4 Services ------------------- */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+    text-align: left;
+    margin: 14rem 2rem;
+}
+
+.services-inner-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2rem;
+    max-width: 1200px;
+    position: relative;
+}
+
+.service-article {
+    border: 2px solid var(--purple);
+    padding: 2.5rem;
+    box-shadow: 2px 29px 15px -20px rgba(222,222,222,1);
+    min-width: auto;
+    min-height: 300px;
+    overflow: hidden;
+    background-color: white;
+}
+
+
+.services-icon {
+    width: 60px;
+}
+
+.service-article h4 {
+    margin: 0.7rem 0 1.8rem 0;
+    font-size: 1.3rem;
+}
+
+/* --------------- 3.5 Contact Form ------------------- */
+.contact-form {
+    /*border: 3px solid green;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.form-title {
+    margin: 5rem 0 0 0;
+    /*border: 3px solid white;*/
+}
+
+.form-title h2 {
+    font-size: 46px;
+}
+
+.form-title p {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 1.5rem;
+}
+
+.contact-form-inner-container {
+    display: flex;
+    flex-direction: column;
+    /*border: 3px solid white;*/
+    max-width: 900px;
+    text-align: left;
+    width: 100%;
+}
+
+.contact-form-inner-container input {
+    padding: 1.4rem 0;
+}
+.contact-form-inner-container input::placeholder, textarea::placeholder {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--gray);
+    padding-left: 1rem;
+}
+
+textarea::placeholder {
+    padding-top: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 250px
+
+}
+
+
+.form-btn {
+    margin: 2.5rem;
+    width: 200px;
+
+}
+
+/* --------------- 3.6 Footer ------------------- */
+footer {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    color: white;
+}
+
+.footer-text {
+    padding: 1.5rem;
+    font-size: 13px;
+}
+
+/*.triangle-footer {*/
+/*    position: absolute;*/
+/*    top: -875px;*/
+/*    color: green;*/
+/*}*/
+/* ------------------------------- 4. Media Queries -------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+    /* --------------- 4.1 Nav-mobile ------------------- */
+
+    .nav-outer-container {
+        justify-content: center;
+    }
+
+    .nav-inner-container {
+        /*border: 3px solid white;*/
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    /* --------------- 4.2 Header-Mobile ------------------- */
+    .header-title {
+        width: auto;
+    }
+
+    .button  {
+        width: auto;
+        padding: 1.8rem;
+    }
+
+    /* --------------- 4.3 Introduction Mobile ------------------- */
+    .introduction > h3:nth-child(-n+3) {
+        width: auto;
+        margin-inline: 1rem;
+    }
+    /* --------------- 4.4 Projects Mobile ------------------- */
+
+    .project {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        margin-inline: 0.5rem;
+    }
+
+    .project-image-wrapper {
+        flex-basis: 400px;
+    }
+
+    .project-title {
+        font-size: 30px;
+    }
+
+    .project:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    /* --------------- 4.5 Services Mobile ------------------- */
+
+    .services-inner-container {
+        grid-template-columns: auto;
+        margin: 2rem;
+        gap: 3rem;
+    }
+
+    .service-article {
+        height: 400px;
+    }
+
+    .services-paragraph {
+        height: 100%;
+    }
+
+    .services-icon {
+        width: 100px;
+    }
+
+    .services-title  {
+        font-size: 40px;
+    }
+
+    /* --------------- 4.6 Contact Form Mobile ------------------- */
+    .form-title h2 {
+        font-size: 30px;
+    }
+
+    .contact-form-inner-container {
+        width: 100%;
+        padding: 0 1rem;
+
+    }
+
+    .form-btn {
+        width: 180px;
+    }
+    /* --------------- 4.7 Bonusopdracht mobile ------------------- */
+    .intro-paragraph::before {
+        font-size: 17rem;
+        left: 100px;
+        top: -140px;
+        letter-spacing: -1.5rem;
+    }
+
+    .project-1::before {
+        font-size: 16rem;
+        top: -170px;
+        left: 90px;
+        font-weight: 700;
+        letter-spacing: -1rem;
+
+    }
+
+    .services-inner-container::before {
+        font-size: 12rem;
+        letter-spacing: -0.7rem;
+        top: -170px;
+        left: -20px;
+
+    }
+
+
+
+}
+
